@@ -1,3 +1,10 @@
+//  1.全局安装Commitizen,
+//  1.1npm install -g commitizen@4.2.4
+
+// 2.全局安装并配置 cz-customizable 插件
+// 2.1使用 npm 下载 cz-customizable
+// 2.2npm i cz-customizable@6.3.0 --save-dev
+
 module.exports = {
   // 可选类型
   types: [
