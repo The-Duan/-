@@ -8,7 +8,6 @@ export const setItem = (key, value) => {
 }
 
 // 获取数据
-
 export const getItem = key => {
   const data = window.localStorage.getItem(key)
   try {
@@ -18,7 +17,7 @@ export const getItem = key => {
   }
 }
 
-// 删除数据
+// 删除指定数据
 
 export const removeItem = key => {
   window.localStorage.removeItem(key)
