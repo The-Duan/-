@@ -1,35 +1,38 @@
 <template>
-    <div class="login-container">
-      <el-form class="login-form" :model="loginForm" :rules="loginRules">
-        <div class="title-container">
-          <h3 class="title">用户登录</h3>
-        </div>
-        <!--username-->
-        <el-form-item prop="username">
+  <div class="login-container">
+    <el-form class="login-form" :model="loginForm" :rules="loginRules">
+      <div class="title-container">
+        <h3 class="title">用户登录</h3>
+      </div>
+      <!--username-->
+      <el-form-item prop="username">
           <span class="svg-container">
             <svg-icon icon="user"></svg-icon>
         </span>
-          <el-input placeholder="username"
-                    name="username"
-                    type="text"
-                    v-model="loginForm.username"></el-input>
-        </el-form-item>
-        <!--password-->
-        <el-form-item prop="password">
+        <el-input placeholder="username"
+                  name="username"
+                  type="text"
+                  v-model="loginForm.username"></el-input>
+      </el-form-item>
+      <!--password-->
+      <el-form-item prop="password">
         <span class="svg-container">
             <svg-icon icon="password"></svg-icon>
         </span>
-          <el-input  placeholder="password"
-                     name="password"
-                     v-model="loginForm.password"></el-input>
-          <span class="svg-container">
-            <svg-icon icon="eye"></svg-icon>
+        <el-input placeholder="password"
+                  name="password"
+                  :type="passwordType"
+                  v-model="loginForm.password"></el-input>
+        <span class="svg-container" @click="onChangePwdType">
+            <svg-icon
+              :icon="passwordType === 'password'? 'eye' : 'eye-open'">
+            </svg-icon>
         </span>
-        </el-form-item>
-        <!--登录按钮-->
-        <el-button type="primary" style="width: 100%; margin-bottom: 30px">登录</el-button>
-      </el-form>
-    </div>
+      </el-form-item>
+      <!--登录按钮-->
+      <el-button type="primary" style="width: 100%; margin-bottom: 30px">登录</el-button>
+    </el-form>
+  </div>
 </template>
 
 <script setup>
@@ -55,6 +58,20 @@ const loginRules = ref({
     validator: validatePassword()
   }]
 })
+// 处理密码框文本显示
+const passwordType = ref('password')
+
+// tempalte中绑定的方法，直接声明即可
+const onChangePwdType = () => {
+  // 当passwordType的值为password时，改为text
+  // 使用ref生命数据，在script中使用时需要加value来获得具体的值
+  // 在tempalte中使用的时候，不需要加value
+  if (passwordType.value === 'password') {
+    passwordType.value = 'text'
+  } else {
+    passwordType.value = 'password'
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -101,6 +118,7 @@ $cursor: #fff;
       }
     }
   }
+
   .svg-container {
     padding: 6px 5px 6px 15px;
     color: $dark_gray;
