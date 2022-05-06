@@ -8,5 +8,7 @@ import installElementPlus from './plugins/element.js'
 import '@/styles/index.scss'
 // 导入svgIcon
 import installIcons from '@/icons/icons-index'
+// 导入路由鉴权
+import './permission.js'
 
 createApp(App).use(store).use(installIcons).use(installElementPlus).use(router).mount('#app')
