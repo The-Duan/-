@@ -5,8 +5,6 @@ const service = axios.create({
   timeout: 5000
 })
 
-export default service
-
 // 请求拦截器
 service.interceptors.request.use(
   config => {
@@ -16,3 +14,5 @@ service.interceptors.request.use(
     return config
   }
 )
+
+export default service
