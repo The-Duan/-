@@ -22,15 +22,6 @@ import AppMain from './components/AppMain.vue'
 import NavBar from './components/NavBar.vue'
 import SidebarIndex from './components/Sidebar/Sidebar-index'
 
-// export default {
-//   components: {
-//     SidebarIndex,
-//     NavBar,
-//     AppMain,
-//     variables
-//   }
-// }
-
 </script>
 
 <style lang="scss" scoped>
