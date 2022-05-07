@@ -8,9 +8,10 @@ import {} from 'vue'
 
 <style lang="scss" scoped>
 .app-main {
+  position: fixed;
   min-height: calc(100vh - 50px);
   width: 100%;
-  position: relative;
+  //position: relative;
   overflow: hidden;
   padding: 61px 20px 20px 20px;
   box-sizing: border-box;

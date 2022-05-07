@@ -1,25 +1,26 @@
 <template>
   <div class="app-wrapper">
     <!-- 左侧 menu -->
-    <SidebarIndex class="selected-container"
-                  :style="{backgroundColor:variables.menuBg}"></SidebarIndex>
+    <SidebarIndex
+      class="sidebar-container"
+      :style="{ backgroundColor: variables.menuBg }"
+    />
     <div class="main-container">
       <div class="fixed-header">
-        <!-- 顶部 navbar -->
-        <NavBar class="NavBar"/>
+        <!-- 顶部的 navbar -->
+        <NavBar />
       </div>
       <!-- 内容区 -->
-      <AppMain/>
+      <AppMain />
     </div>
-
   </div>
 </template>
 
 <script setup>
 import variables from '@/styles/variables.module.scss'
-import AppMain from '@/layout/components/AppMain'
-import NavBar from '@/layout/components/NavBar'
-import SidebarIndex from '@/layout/components/Sidebar/Sidebar-index'
+import AppMain from './components/AppMain.vue'
+import NavBar from './components/NavBar.vue'
+import SidebarIndex from './components/Sidebar/Sidebar-index'
 
 // export default {
 //   components: {
@@ -33,13 +34,12 @@ import SidebarIndex from '@/layout/components/Sidebar/Sidebar-index'
 </script>
 
 <style lang="scss" scoped>
-@import '~@/styles/mixin.scss';
+@import '../styles/mixin.scss';
 @import '~@/styles/variables.module.scss';
 
 .app-wrapper {
   @include clearfix;
   position: relative;
-  border: 1px solid red;
   height: 100%;
   width: 100%;
 }
