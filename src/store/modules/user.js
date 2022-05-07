@@ -1,4 +1,4 @@
-import { login, getUserInfo } from '@/api/sys'
+import { getUserInfo, login } from '@/api/sys'
 import md5 from 'md5'
 import { getItem, setItem } from '@/utils/storage'
 import { TOKEN } from '@/constant'
@@ -42,12 +42,12 @@ export default {
             reject(err)
           })
       })
+    },
+    /* 获取用户信息 */
+    async getUserInfo (context) {
+      const res = await getUserInfo()
+      this.commit('user/setUserInfo', res)
+      return res
     }
-  },
-  /* 获取用户信息 */
-  async getUserInfo (context) {
-    const res = await getUserInfo()
-    this.commit('user/setUserInfo', res)
-    return res
   }
 }
