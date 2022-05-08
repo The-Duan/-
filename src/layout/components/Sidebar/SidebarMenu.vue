@@ -30,6 +30,15 @@
 
 <script setup>
 import { Location } from '@element-plus/icons-vue'
+import { useRouter } from 'vue-router'
+import { computed } from 'vue'
+import { filterRoutes, generateMenus } from '@/utils/route'
 
+const router = useRouter()
+const routes = computed(() => {
+  const fRoutes = filterRoutes(router.getRoutes)
+  return generateMenus(fRoutes)
+})
+console.log(routes)
 console.log(Location)
 </script>
