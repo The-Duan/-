@@ -1,21 +1,22 @@
 <template>
   <!-- 一级 menu 菜单 -->
   <el-menu
+    :default-active="activeMenu"
     :uniqueOpened="true"
-    default-active="2"
-    background-color="#545c64"
-    text-color="#fff"
-    active-text-color="#ffd04b"
+    :background-color="$store.getters.cssVar.menuBg"
+    :text-color="$store.getters.cssVar.menuText"
+    :active-text-color="$store.getters.cssVar.menuActiveText"
+    router
   >
     <SidebarItem v-for="item in routes"
-                  :key="item.path"
-                  :route="item"></SidebarItem>
+                 :key="item.path"
+                 :route="item"></SidebarItem>
   </el-menu>
 </template>
 
 <script setup>
 import { computed } from 'vue'
-import { useRouter } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 import { filterRouters, generateMenus } from '@/utils/route'
 import SidebarItem from '@/layout/components/Sidebar/SidebarItem'
 
@@ -27,4 +28,11 @@ const routes = computed(() => {
 })
 console.log(JSON.stringify(routes.value))
 console.log(SidebarItem)
+
+// 默认激活
+const route = useRoute()
+const activeMenu = computed(() => {
+  const { path } = route
+  return path
+})
 </script>
