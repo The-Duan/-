@@ -1,5 +1,6 @@
 <template>
-  <div class="app-wrapper">
+  <div class="app-wrapper"
+       :class="[$store.getters.sidebarOpened ? 'openSidebar': 'hideSidebar']">
     <!-- 左侧 menu -->
     <SidebarIndex
       class="sidebar-container"
@@ -22,6 +23,7 @@ import AppMain from './components/AppMain.vue'
 import NavBar from './components/NavBar.vue'
 import SidebarIndex from './components/Sidebar/Sidebar-index'
 
+console.log(variables, AppMain, NavBar, SidebarIndex)
 </script>
 
 <style lang="scss" scoped>
@@ -41,5 +43,9 @@ import SidebarIndex from './components/Sidebar/Sidebar-index'
   right: 0;
   z-index: 9;
   width: calc(100% - #{$sideBarWidth});
+  transition: width 0.28s;
+}
+.hideSidebar .fixed-header {
+  width: calc(100% - #{$hideSideBarWidth});
 }
 </style>
