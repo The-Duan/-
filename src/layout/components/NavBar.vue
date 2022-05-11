@@ -2,6 +2,8 @@
   <div class="navbar">
 <!--    汉堡按钮-->
     <Hamburger class="hamburger-container"/>
+<!--    面包屑-->
+    <BreadCrumb class="breadcrumb-container"/>
     <div class="right-menu">
       <!-- 头像 -->
       <el-dropdown class="avatar-container" trigger="click">
@@ -34,8 +36,9 @@ import {} from 'vue'
 import { Tools } from '@element-plus/icons-vue'
 import { useStore } from 'vuex'
 import Hamburger from '../components/Hamburger/HambUrger.vue'
+import BreadCrumb from '@/components/Breadcrumb/BreadCrumb'
 
-console.log(Tools, Hamburger)
+console.log(Tools, Hamburger, BreadCrumb)
 const store = useStore()
 const logout = () => {
   store.dispatch('user/logout')
@@ -79,6 +82,9 @@ const logout = () => {
           margin-right: 12px;
         }
       }
+    }
+    .breadcrumb-container{
+      float:left;
     }
   }
 }
