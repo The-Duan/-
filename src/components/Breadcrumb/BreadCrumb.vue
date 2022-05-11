@@ -1,23 +1,25 @@
 <template>
   <el-breadcrumb class="breadcrumb" separator="/">
-    <el-breadcrumb-item
-      v-for="(item, index) in breadcrumbData"
-      :key="item.path">
-      <!--      可点击项-->
-      <span class="no-redirect" v-if="index === breadcrumbData.length-1">
+    <transition-group name="breadcrumb">
+      <el-breadcrumb-item
+        v-for="(item, index) in breadcrumbData"
+        :key="item.path">
+        <!--      可点击项-->
+        <span class="no-redirect" v-if="index === breadcrumbData.length-1">
         {{ item.meta.title }}
       </span>
-      <!--      不可点击项-->
-      <span class="redirect" @click="onLinkClick(item)" v-else>
+        <!--      不可点击项-->
+        <span class="redirect" @click="onLinkClick(item)" v-else>
         {{ item.meta.title }}
       </span>
-    </el-breadcrumb-item>
+      </el-breadcrumb-item>
+      </transition-group>
   </el-breadcrumb>
 </template>
 
 <script setup>
 import { ref, watch } from 'vue'
-import { useRouter, useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 import { useStore } from 'vuex'
 
 // 生成数组数据
