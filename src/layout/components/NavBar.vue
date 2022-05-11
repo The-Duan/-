@@ -9,7 +9,7 @@
           <el-avatar
             shape="square"
             :size="40"
-            :src="$store.getters.userInfo.avatar"
+            src="https://mms1.baidu.com/it/u=4113123888,3436296091&fm=253&app=120&f=JPEG&fmt=auto&q=75?w=500&h=500"
           ></el-avatar>
           <el-icon><Tools /></el-icon>
         </div>
