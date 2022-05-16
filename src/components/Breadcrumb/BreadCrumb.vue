@@ -6,11 +6,11 @@
         :key="item.path">
         <!--      可点击项-->
         <span class="no-redirect" v-if="index === breadcrumbData.length-1">
-        {{ item.meta.title }}
+        {{ generateTitle(item.meta.title) }}
       </span>
         <!--      不可点击项-->
         <span class="redirect" @click="onLinkClick(item)" v-else>
-        {{ item.meta.title }}
+        {{ generateTitle(item.meta.title) }}
       </span>
       </el-breadcrumb-item>
       </transition-group>
@@ -21,6 +21,7 @@
 import { ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useStore } from 'vuex'
+import { generateTitle } from '@/utils/i18n.js'
 
 // 生成数组数据
 const breadcrumbData = ref([])
