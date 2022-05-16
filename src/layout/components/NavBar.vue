@@ -5,6 +5,7 @@
 <!--    面包屑-->
     <BreadCrumb class="breadcrumb-container"/>
     <div class="right-menu">
+      <screen-full class="right-menu-item hover-effect"></screen-full>
       <theme-select class="right-menu-item hover-effect"></theme-select>
       <lang-select class="right-menu-item hover-effect"></lang-select>
 
@@ -42,6 +43,7 @@ import Hamburger from '../components/Hamburger/HambUrger.vue'
 import BreadCrumb from '@/components/Breadcrumb/BreadCrumb'
 import LangSelect from '@/components/LangSelect/LangSelect.vue'
 import ThemeSelect from '@/components/ThemeSelect/ThemeSelect'
+import ScreenFull from '@/components/Screenfull/ScreenFull'
 
 console.log(Tools, Hamburger, BreadCrumb, LangSelect, ThemeSelect)
 const store = useStore()
