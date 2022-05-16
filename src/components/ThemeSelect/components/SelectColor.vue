@@ -68,9 +68,10 @@ const confirm = () => {
 </script>
 
 <style lang="scss" scoped>
-.center{
+.center {
   text-align: center;
-  .title{
+
+  .title {
     margin-bottom: 12px;
   }
 }
