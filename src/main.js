@@ -10,5 +10,13 @@ import '@/styles/index.scss'
 import installIcons from '@/icons/icons-index'
 // 导入路由鉴权
 import './permission.js'
+// 导入i18n
+import i18n from '@/i18n'
 
-createApp(App).use(store).use(installIcons).use(installElementPlus).use(router).mount('#app')
+createApp(App)
+  .use(store)
+  .use(installIcons)
+  .use(installElementPlus)
+  .use(router)
+  .use(i18n)
+  .mount('#app')

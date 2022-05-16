@@ -17,6 +17,7 @@
     "node-polyfill-webpack-plugin": "^1.1.4",
     "svg-sprite-loader": "6.0.9",
     "vue": "^3.2.13",
+    "vue-i18n": "^9.2.0-beta.35",
     "vue-router": "^4.0.11",
     "vuex": "^4.0.2"
   },
