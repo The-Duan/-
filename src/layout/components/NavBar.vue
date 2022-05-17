@@ -5,8 +5,13 @@
 <!--    面包屑-->
     <BreadCrumb class="breadcrumb-container"/>
     <div class="right-menu">
+<!--      搜索按钮-->
+      <header-search class="right-menu-item hover-effect"></header-search>
+<!--      全屏按钮-->
       <screen-full class="right-menu-item hover-effect"></screen-full>
+<!--      中英文切换按钮-->
       <theme-select class="right-menu-item hover-effect"></theme-select>
+<!--      设置按钮-->
       <lang-select class="right-menu-item hover-effect"></lang-select>
 
       <!-- 头像 -->
@@ -44,6 +49,7 @@ import BreadCrumb from '@/components/Breadcrumb/BreadCrumb'
 import LangSelect from '@/components/LangSelect/LangSelect.vue'
 import ThemeSelect from '@/components/ThemeSelect/ThemeSelect'
 import ScreenFull from '@/components/Screenfull/ScreenFull'
+import HeaderSearch from '@/components/HeaderSearch/HeaderSearch'
 
 console.log(Tools, Hamburger, BreadCrumb, LangSelect, ThemeSelect)
 const store = useStore()
