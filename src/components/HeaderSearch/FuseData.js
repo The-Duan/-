@@ -1,4 +1,3 @@
-import path from 'path'
 import i18n from '@/i18n'
 
 // 筛选出可供搜索的路由对象
@@ -13,7 +12,7 @@ export const generateRoutes = (routes, basePath = '/', prefixTitle = []) => {
   for (const route of routes) {
     // 创建包含 path 和 title 的 item
     const data = {
-      path: path.resolve(basePath, route.path),
+      path: (basePath + route.path),
       title: [...prefixTitle]
     }
     // 当前存在 meta 时，使用 i18n 解析国际化数据，组合成新的 title 内容
