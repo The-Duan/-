@@ -18,12 +18,10 @@
 </template>
 
 <script setup>
-import variables from '@/styles/variables.module.scss'
 import AppMain from './components/AppMain.vue'
 import NavBar from './components/NavBar.vue'
 import SidebarIndex from './components/Sidebar/Sidebar-index'
 
-console.log(variables, AppMain, NavBar, SidebarIndex)
 </script>
 
 <style lang="scss" scoped>

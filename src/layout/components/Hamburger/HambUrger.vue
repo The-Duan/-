@@ -15,7 +15,6 @@ const store = useStore()
 const icon = computed(() => {
   return store.getters.sidebarOpened ? 'hamburger-opened' : 'hamburger-closed'
 })
-console.log(useStore())
 </script>
 
 <style lang="scss" scoped>

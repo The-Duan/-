@@ -20,7 +20,6 @@
 <script setup>
 import SidebarMenu from '@/layout/components/Sidebar/SidebarMenu'
 
-console.log(SidebarMenu)
 </script>
 
 <style lang="scss" scoped>

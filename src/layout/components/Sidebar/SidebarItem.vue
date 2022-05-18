@@ -29,5 +29,4 @@ defineProps({
     required: true
   }
 })
-console.log(SidebarItem, MenuItem)
 </script>

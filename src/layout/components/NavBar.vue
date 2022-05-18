@@ -51,7 +51,6 @@ import ThemeSelect from '@/components/ThemeSelect/ThemeSelect'
 import ScreenFull from '@/components/Screenfull/ScreenFull'
 import HeaderSearch from '@/components/HeaderSearch/HeaderSearch'
 
-console.log(Tools, Hamburger, BreadCrumb, LangSelect, ThemeSelect)
 const store = useStore()
 const logout = () => {
   store.dispatch('user/logout')
