@@ -35,6 +35,25 @@ export default {
     }) {
       state.tagsViewList[index] = tag
       setItem(TAGS_VIEW, state.tagsViewList)
+    },
+    // 删除 tag
+    // @param {type: 'other'||'right'||'index', index: index} payload
+    removeTagsView (state, payload) {
+      // 删除当前
+      if (payload.type === 'index') {
+        state.tagsViewList.splice(payload.index, 1)
+        return
+      } else if (payload.type === 'other') {
+        // 删除其他
+        // 删除右侧
+        state.tagsViewList.splice(payload.index + 1, state.tagsViewList.length - payload.index + 1)
+        // 删除左侧
+        state.tagsViewList.splice(0, payload.index)
+      } else if (payload.type === 'right') {
+        // 删除右侧
+        state.tagsViewList.splice(payload.index + 1, state.tagsViewList.length - payload.index + 1)
+      }
+      setItem(TAGS_VIEW, state.tagsViewList)
     }
   },
   actions: {}

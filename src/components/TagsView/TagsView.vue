@@ -10,6 +10,7 @@
         backgroundColor:isActive(tag)?$store.getters.cssVar.menuBg:'',
         borderColor:isActive(tag)?$store.getters.cssVar.menuBg:''
       }"
+      @contextmenu.prevent="openMenu($event, index)"
     >
       {{ tag.title }}
       <el-icon
@@ -20,12 +21,20 @@
         <Close/>
       </el-icon>
     </router-link>
+    <context-menu
+      v-show="visible"
+      :style="menuStyle"
+      :index="selectIndex"
+    ></context-menu>
   </div>
 </template>
 
 <script setup>
 import { useRoute } from 'vue-router'
+import { ref } from 'vue'
+import ContextMenu from '@/components/TagsView/ContextMenu'
 import { Close } from '@element-plus/icons-vue'
+import { useStore } from 'vuex'
 
 const route = useRoute()
 
@@ -35,7 +44,27 @@ const isActive = tag => {
 }
 
 // 关闭tag的点击事件
+const store = useStore()
 const onCloseClick = () => {
+  store.commit('app/removeTagsView', {
+    type: 'index',
+    index: selectIndex.value
+  })
+}
+
+// 鼠标右键
+const visible = ref(false)
+const menuStyle = ref({
+  left: 0,
+  top: 0
+})
+const selectIndex = ref(0)
+const openMenu = (e, index) => {
+  const { x, y } = e
+  menuStyle.value.left = x + 'px'
+  menuStyle.value.top = y + 'px'
+  selectIndex.value = index
+  visible.value = true
 }
 </script>
 
