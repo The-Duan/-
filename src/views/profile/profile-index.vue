@@ -1,16 +1,45 @@
 <template>
-  <div class="">
-    {{ $t('msg.test') }}
+  <div class="my-container">
+    <el-row>
+      <el-col :span="6">
+<!--        项目介绍-->
+        <project-card class="project-card"></project-card>
+      </el-col>
+      <el-col :span="18">
+        <el-card>
+          <el-tabs v-model="activeName">
+<!--            项目功能-->
+            <el-tab-pane :label="$t('msg.profile.feature')" name="feature">
+              <feature/>
+            </el-tab-pane>
+<!--            项目章节-->
+            <el-tab-pane :label="$t('msg.profile.chapter')" name="chapter">
+              <chapter/>
+            </el-tab-pane>
+<!--            项目作者-->
+            <el-tab-pane :label="$t('msg.profile.author')" name="author">
+              <author/>
+            </el-tab-pane>
+          </el-tabs>
+        </el-card>
+      </el-col>
+    </el-row>
   </div>
-  <el-pagination
-    :page-size="100"
-    layout="total,prev,pager,next"
-    :total="1000"
-  />
 </template>
 
 <script setup>
-import {} from 'vue'
+import { ref } from 'vue'
+import ProjectCard from '@/views/profile/components/ProjectCard'
+import Author from '@/views/profile/components/ProjectAuthor'
+import Chapter from '@/views/profile/components/ProjectChapter'
+import Feature from '@/views/profile/components/ProjectFeature'
+
+const activeName = ref('feature')
+
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.project-card{
+  margin-right: 20px;
+}
+</style>
