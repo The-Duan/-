@@ -45,10 +45,10 @@ const isActive = tag => {
 
 // 关闭tag的点击事件
 const store = useStore()
-const onCloseClick = () => {
+const onCloseClick = index => {
   store.commit('app/removeTagsView', {
     type: 'index',
-    index: selectIndex.value
+    index: index
   })
 }
 
