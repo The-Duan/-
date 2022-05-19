@@ -3,8 +3,10 @@
 <!--    汉堡按钮-->
     <Hamburger class="hamburger-container"/>
 <!--    面包屑-->
-    <BreadCrumb class="breadcrumb-container"/>
+    <BreadCrumb id="guide-breadcrumb" class="breadcrumb-container"/>
     <div class="right-menu">
+<!--      引导按钮-->
+      <guide-index class="right-menu-item hover-effect"/>
 <!--      搜索按钮-->
       <header-search class="right-menu-item hover-effect"></header-search>
 <!--      全屏按钮-->
@@ -50,6 +52,7 @@ import LangSelect from '@/components/LangSelect/LangSelect.vue'
 import ThemeSelect from '@/components/ThemeSelect/ThemeSelect'
 import ScreenFull from '@/components/Screenfull/ScreenFull'
 import HeaderSearch from '@/components/HeaderSearch/HeaderSearch'
+import GuideIndex from '@/components/Guide/GuideIndex'
 
 const store = useStore()
 const logout = () => {

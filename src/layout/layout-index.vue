@@ -3,6 +3,7 @@
        :class="[$store.getters.sidebarOpened ? 'openSidebar': 'hideSidebar']">
     <!-- 左侧 menu -->
     <SidebarIndex
+      id="guide-sidebar"
       class="sidebar-container"
       :style="{ backgroundColor: $store.getters.cssVar.menuBg }"
     />
@@ -11,7 +12,7 @@
         <!-- 顶部的 navbar -->
         <NavBar />
         <!--tags-->
-        <tags-view></tags-view>
+        <tags-view id="guide-tags"></tags-view>
       </div>
       <!-- 内容区 -->
       <AppMain />
