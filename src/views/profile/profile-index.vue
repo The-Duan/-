@@ -13,9 +13,6 @@
               <Feature :features="featureData"/>
             </el-tab-pane>
 <!--            项目章节-->
-            <el-tab-pane :label="$t('msg.profile.chapter')" name="chapter">
-              <chapter/>
-            </el-tab-pane>
 <!--            项目作者-->
             <el-tab-pane :label="$t('msg.profile.author')" name="author">
               <author/>
@@ -31,7 +28,6 @@
 import { ref } from 'vue'
 import ProjectCard from '@/views/profile/components/ProjectCard'
 import Author from '@/views/profile/components/ProjectAuthor'
-import Chapter from '@/views/profile/components/ProjectChapter'
 import Feature from '@/views/profile/components/ProjectFeature'
 import { feature } from '@/api/user'
 import { watchSwitchLang } from '@/utils/i18n'

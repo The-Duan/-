@@ -91,10 +91,10 @@ export default {
     feature: 'Feature',
     chapter: 'Chapter',
     author: 'Author',
-    name: 'Sunday',
+    name: 'Duan',
     job: 'A front-end development program',
     Introduction:
-      'A senior technical expert, once worked in a domestic first-line Internet company, and has coordinated multiple large-scale projects with more than tens of millions of users. Committed to researching big front-end technology, he has been invited to participate in domestic front-end technology sharing sessions many times, such as: Google China Technology Sharing Session in 2018.'
+    'Front-end programmer, graduated from The computer Information Management major of Taiyuan University of Science and Technology Jincheng Branch, master native HTML5 tag, JavaScript, ES6 + grammar, proficient in using Vue framework, understand the use of TypeScript, master Git/Github work process'
   },
   userInfo: {
     print: 'Print',
