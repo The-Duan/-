@@ -10,7 +10,7 @@
           <el-tabs v-model="activeName">
 <!--            项目功能-->
             <el-tab-pane :label="$t('msg.profile.feature')" name="feature">
-              <Feature/>
+              <Feature :features="featureData"/>
             </el-tab-pane>
 <!--            项目章节-->
             <el-tab-pane :label="$t('msg.profile.chapter')" name="chapter">
