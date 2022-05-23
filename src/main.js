@@ -12,8 +12,11 @@ import installIcons from '@/icons/icons-index'
 import './permission.js'
 // 导入i18n
 import i18n from '@/i18n'
+// 导入全局属性
+import installFilter from '@/filters/index'
 
 createApp(App)
+  .use(installFilter)
   .use(store)
   .use(installIcons)
   .use(installElementPlus)
