@@ -15,7 +15,7 @@ const privateRoutes = [
       // 员工管理
       {
         path: '/user/manage',
-        component: () => import('@/views/user-manage/UserManage-index.vue'),
+        component: () => import('@/views/user-manage/UserManage.vue'),
         meta: {
           title: 'userManage',
           icon: 'personnel-manage'
@@ -25,7 +25,7 @@ const privateRoutes = [
       {
         path: '/user/role',
         name: 'userRole',
-        component: () => import('@/views/role-list/RoleList-index.vue'),
+        component: () => import('@/views/role-list/RoleList.vue'),
         meta: {
           title: 'roleList',
           icon: 'role'
@@ -35,7 +35,7 @@ const privateRoutes = [
       {
         path: '/user/permission',
         name: 'userPermission',
-        component: () => import('@/views/permission-list/permission-index.vue'),
+        component: () => import('@/views/permission-list/PermissionList.vue'),
         meta: {
           title: 'permissionList',
           icon: 'permission'
@@ -45,7 +45,7 @@ const privateRoutes = [
       {
         path: '/user/info/:id',
         name: 'userInfo',
-        component: () => import('@/views/user-info/UserInfo-index.vue'),
+        component: () => import('@/views/user-info/UserInfo.vue'),
         meta: {
           title: 'userInfo'
         }
@@ -73,7 +73,7 @@ const privateRoutes = [
       {
         path: '/article/ranking',
         name: 'articleRanking',
-        component: () => import('@/views/article-ranking/ArticleRanking-index.vue'),
+        component: () => import('@/views/article-ranking/ArticleRanking.vue'),
         meta: {
           title: 'articleRanking',
           icon: 'article-ranking'
@@ -82,7 +82,7 @@ const privateRoutes = [
       {
         path: '/article/:id',
         name: 'articleDetail',
-        component: () => import('@/views/article-detail/ArticleDetail-index.vue'),
+        component: () => import('@/views/article-detail/ArticleDetail.vue'),
         meta: {
           title: 'articleDetail'
         }
@@ -90,7 +90,7 @@ const privateRoutes = [
       {
         path: '/article/create',
         name: 'articleCreate',
-        component: () => import('@/views/article-create/ArticleCreate-index.vue'),
+        component: () => import('@/views/article-create/ArticleCreate.vue'),
         meta: {
           title: 'articleCreate',
           icon: 'article-create'
@@ -99,7 +99,7 @@ const privateRoutes = [
       {
         path: '/article/editor/:id',
         name: 'articleEditor',
-        component: () => import('@/views/article-create/ArticleCreate-index.vue'),
+        component: () => import('@/views/article-create/ArticleCreate.vue'),
         meta: {
           title: 'articleEditor'
         }
