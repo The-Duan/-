@@ -1,8 +1,8 @@
 /* 处理input边框问题 */
 .el-input__wrapper {
   background: none !important;
+  box-shadow: none !important;
 }
-
 /* 处理头像灰色的底 */
 .el-avatar {
   --el-avatar-background-color: none !important;

@@ -14,8 +14,11 @@ import './permission.js'
 import i18n from '@/i18n'
 // 导入全局属性
 import installFilter from '@/filters/index'
+// 指令
+import installDirective from '@/directives'
 
 createApp(App)
+  .use(installDirective)
   .use(installFilter)
   .use(store)
   .use(installIcons)
