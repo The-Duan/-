@@ -7,8 +7,8 @@
       :key="tag.fullPath"
       :to="{path: tag.fullPath}"
       :style="{
-        backgroundColor:isActive(tag)?$store.getters.cssVar.menuBg:'',
-        borderColor:isActive(tag)?$store.getters.cssVar.menuBg:''
+        backgroundColor: isActive(tag) ? $store.getters.cssVar.menuBg : '',
+          borderColor: isActive(tag) ? $store.getters.cssVar.menuBg : ''
       }"
       @contextmenu.prevent="openMenu($event, index)"
     >
@@ -16,7 +16,7 @@
       <el-icon
         icon="Close"
         class="el-icon-Close"
-        v-show="isActive(tag)"
+        v-show="!isActive(tag)"
         @click.prevent.stop="onCloseClick(index)">
         <Close/>
       </el-icon>
