@@ -21,3 +21,9 @@ export const deleteArticle = articleId => {
     url: `/article/delete/${articleId}`
   })
 }
+// 获取文章详情
+export const articleDetail = (articleId) => {
+  return request({
+    url: `/article/${articleId}`
+  })
+}
