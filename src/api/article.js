@@ -15,3 +15,9 @@ export const articleSort = data => {
     data
   })
 }
+// 删除文章
+export const deleteArticle = articleId => {
+  return request({
+    url: `/article/delete/${articleId}`
+  })
+}
