@@ -57,7 +57,7 @@ import { deleteArticle, getArticleList } from '@/api/article'
 import { watchSwitchLang } from '@/utils/i18n'
 import { dynamicData, selectDynamicLabel, tableColumns } from './dynamic/index.js'
 import { tableRef, initSortable } from './sortable/index.js'
-import ElMessage, { ElMessageBox } from 'element-plus'
+import { ElMessageBox, ElMessage } from 'element-plus'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 
